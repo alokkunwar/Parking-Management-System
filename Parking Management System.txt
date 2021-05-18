@@ -1,0 +1,157 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+
+int bus();
+int cycle();
+int rikshaw();
+int motorcycle();
+int toto();
+int delete();
+int showitem();
+
+int no_of_rikshaw = 0, no_of_bus = 0, no_of_cycle = 0, no_of_toto = 0, amunt = 0, count = 0, no_of_motorcycle = 0, p, q, r, s, t;
+
+int main()
+{
+	int c;
+	printf("\t\t\t  PARKING MANAGEMENT SYSTEM\n\n\n");
+	printf("Enter The Amount For One Bus:\n");
+	scanf_s("%d", &p);
+	printf("Enter The Amount For One Cycle:\n");
+	scanf_s("%d", &q);
+	printf("Enter The Amount For One Rickshaw:\n");
+	scanf_s("%d", &r);
+	printf("Enter The Amount For One Motorcycle:\n");
+	scanf_s("%d", &s);
+	printf("Enter The Amount For One Toto:\n");
+	scanf_s("%d", &t);
+
+	while (1) {
+
+		system("CLS");
+		printf("\t\t\t  PARKING MANAGEMENT SYSTEM\n\n\n\n");
+		printf("\n1. Bus");
+		printf("\n2. Cycle");
+		printf("\n3. Rickshaw");
+		printf("\n4. Motorcycle");
+		printf("\n5. Toto");
+		printf("\n6. Show Status");
+		printf("\n7. Delete Data");
+		printf("\n8. Exit");
+		printf("\n\nEnter Your Choice:\n");
+		scanf_s("%d", &c);
+
+
+		switch (c)
+		{
+		case 1: bus();
+			break;
+
+		case 2: cycle();
+			break;
+
+		case 3: rikshaw();
+			break;
+
+		case 4: motorcycle();
+			break;
+
+		case 5: toto();
+			break;
+
+		case 6: showitem();
+			break;
+
+		case 7: delete();
+			break;
+
+		case 8: exit(0);
+
+		default: printf("\nInvalid Choice");
+
+		}
+		getch();
+	}
+	return 0;
+
+
+}
+
+
+
+int delete()
+{
+	no_of_bus = 0;
+	no_of_cycle = 0;
+	no_of_rikshaw = 0;
+	no_of_motorcycle = 0;
+	no_of_toto = 0;
+	amunt = 0;
+	count = 0;
+	printf("\nDeleted Successfully");
+	return 0;
+}
+
+int showitem()
+{
+	printf("\nNumber of Bus = %d", no_of_bus);
+	printf("\nNumber of Cycle = %d", no_of_cycle);
+	printf("\nNumber of Rikshaw = %d", no_of_rikshaw);
+	printf("\nTotal Number of Motorcycle = %d", no_of_motorcycle);
+	printf("\nTotal Number of Toto = %d", no_of_toto);
+	printf("\nTotal Number of Vechile = %d", count);
+	printf("\nTotal Amount = %d", amunt);
+	return 0;
+}
+
+int bus()
+{
+
+	no_of_bus++;
+	amunt = amunt + p;
+	count++;
+	printf("\nEntry of %d Bus Successfully", no_of_bus);
+	return 0;
+}
+
+int cycle()
+{
+
+	no_of_cycle++;
+	amunt = amunt + q;
+	count++;
+	printf("\nEntry of %d Cycle Successfully", no_of_cycle);
+	return 0;
+}
+
+int rikshaw()
+{
+
+	no_of_rikshaw++;
+	amunt = amunt + r;
+	count++;
+	printf("\nEntry of %d Rickshaw Successfully", no_of_rikshaw);
+	return 0;
+}
+
+int motorcycle()
+{
+
+	no_of_motorcycle++;
+	amunt = amunt + s;
+	count++;
+	printf("\nEntry of %d Motorcycle Successfully", no_of_motorcycle);
+	return 0;
+}
+
+int toto()
+{
+	no_of_toto++;
+	amunt = amunt + t;
+	count++;
+	printf("\nEntry of %d Toto Successfully", no_of_toto);
+	return 0;
+}
